@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/feedback-style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Explore J&K</h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html" target="_blank">Home</a></li>
+                    <li><a href="about.html" target="_blank">About</a></li>
+                    <li><a href="contact.html" target="_blank">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+<!-- Navbar (can be customized as needed) -->
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow p-4">
+                <h3 class="text-center mb-4">We Value Your Feedback!</h3>
+                <form id="feedbackForm">
+                    <div class="form-group">
+                        <label for="userName">Your Name:</label>
+                        <input type="text" id="userName" class="form-control" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="feedbackText">Your Feedback:</label>
+                        <textarea id="feedbackText" class="form-control" rows="4" placeholder="Type your feedback" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Submit Feedback</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Display Submitted Feedback -->
+<div class="container my-4">
+    <h4 class="text-center">Submitted Feedback</h4>
+    <div id="feedbackDisplay" class="bg-light p-4" style="border-radius: 10px; display: none;">
+        <p><strong>Name: </strong><span id="displayName"></span></p>
+        <p><span id="displayFeedback"></span></p>
+    </div>
+</div>
+
+<script src="js/feedback.js"></script> <!-- Link to your JS -->
+</body>
+</html>
